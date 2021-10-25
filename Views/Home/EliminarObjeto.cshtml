@@ -1,0 +1,6 @@
+﻿@model Mascota
+
+<h3>¿Desea eliminar a la mascota @Model.Nombre?</h3>
+
+<a asp-action="ListaObjetos">No</a>
+@Html.ActionLink("Sí", "ConfirmacionEliminar", new { Id = Model.Id})

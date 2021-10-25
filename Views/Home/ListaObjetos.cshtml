@@ -1,0 +1,26 @@
+﻿@model List<Mascota>
+
+ <a class="btn btn-primary" asp-action="AgregarObjeto">Agregar una mascota</a> <a class="btn btn-primary" asp-action="CargarObjetos">Cargar objetos</a> 
+<table class="table table-striped">
+     <tr>
+            <th>Id</th>
+            <th>Tipo</th>
+            <th>Raza</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </tr>
+    @foreach (Mascota m in Model)
+    {
+    <tr>
+        <td>@m.Id</td>
+        <td>@m.Tipo</td>
+        <td>@m.Raza</td>
+        <td>@m.Nombre</td>
+        <td>@m.Edad</td>
+        <td>@Html.ActionLink("Editar", "EditarObjeto", new { Id = m.Id})</td>
+        <td>@Html.ActionLink("Eliminar", "EliminarObjeto", new { Id = m.Id})</td>
+    </tr>
+    }
+</table>

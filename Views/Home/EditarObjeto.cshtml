@@ -1,0 +1,30 @@
+﻿@model Mascota
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-action="EditarObjeto" method="post" class="col-md-8">
+    <div class= "form-group">
+        <label>Numero de identificacion:</label>
+        <input asp-for="Id" class="form-control" readonly/>
+    </div>
+
+    <div class= "form-group">
+        <label>Tipo de mascota:</label>
+        <input asp-for="Tipo" class="form-control" />
+    </div>
+
+    <div class= "form-group">
+        <label>Raza:</label>
+        <input asp-for="Raza"  class="form-control"/>
+    </div>
+
+    <div class= "form-group">
+        <label>Nombre:</label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+
+    <div class= "form-group">
+        <label>Edad:</label>
+        <input asp-for="Edad" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
